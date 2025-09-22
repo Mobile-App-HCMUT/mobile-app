@@ -5,11 +5,6 @@ labels: ["enhancement"]
 assignees: []
 
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Cảm ơn bạn đã đóng góp! Hãy điền các thông tin dưới đây để team có thể hiểu và xử lý nhanh hơn.
-
   - type: input
     id: summary
     attributes:
@@ -18,17 +13,6 @@ body:
       placeholder: 'Ví dụ: Enhance the livestream experience by improving the comment viewing functionality'
     validations:
       required: true
-
-  - type: textarea
-    id: acceptance_text
-    attributes:
-      label: Acceptance Criteria (miêu tả)
-      description: Viết mô tả/ghi chú cho acceptance criteria nếu cần
-      placeholder: |
-        - Comments appear instantly (<1s delay) without page refresh
-        - Smooth, consistent synchronization across all viewers
-    validations:
-      required: false
 
   - type: checkboxes
     id: acceptance_checks
