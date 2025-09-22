@@ -1,5 +1,5 @@
 name: Feature Request / Improvement
-description: Mô tả tính năng hoặc cải thiện bạn muốn — càng cụ thể càng tốt.
+description: Mô tả tính năng hoặc cải thiện — điền càng chi tiết càng tốt.
 title: "[Feature] "
 labels: ["enhancement"]
 assignees: []
@@ -8,52 +8,49 @@ body:
   - type: markdown
     attributes:
       value: |
-        Cảm ơn bạn đã đóng góp! Hãy điền các thông tin bên dưới để giúp team tái tạo và xử lý nhanh hơn.
+        Cảm ơn bạn đã đóng góp! Hãy điền các thông tin dưới đây để team có thể hiểu và xử lý nhanh hơn.
 
   - type: input
-    id: description
+    id: summary
     attributes:
       label: Description
-      description: Giải thích chi tiết về tính năng / cải thiện
+      description: Giải thích ngắn gọn về feature / cải tiến
       placeholder: 'Ví dụ: Enhance the livestream experience by improving the comment viewing functionality'
     validations:
       required: true
 
   - type: textarea
-    id: acceptance_criteria
+    id: acceptance_text
     attributes:
-      label: Acceptance Criteria
-      description: Danh sách các tiêu chí để chấp nhận feature này
+      label: Acceptance Criteria (miêu tả)
+      description: Viết mô tả/ghi chú cho acceptance criteria nếu cần
       placeholder: |
         - Comments appear instantly (<1s delay) without page refresh
         - Smooth, consistent synchronization across all viewers
-        - Fully responsive on desktop
-        - Backward compatible with existing livestream modules
     validations:
-      required: true
+      required: false
 
   - type: checkboxes
-    id: extras
+    id: acceptance_checks
     attributes:
-      label: Các tuỳ chọn bổ sung (nếu có)
+      label: Acceptance Criteria (checkbox)
+      description: Đánh dấu những tiêu chí đã thỏa
       options:
-        - label: Thêm bản dịch tiếng Việt
-          value: translate_vi
-        - label: Hỗ trợ theme tối / sáng
-          value: theme_support
-        - label: Tương thích thiết bị di động
-          value: mobile_compatible
+        - label: Comments appear instantly (<1s delay) without page refresh
+        - label: Smooth, consistent synchronization across all viewers
+        - label: Fully responsive on desktop
+        - label: Backward compatible with existing livestream modules
 
   - type: dropdown
     id: priority
     attributes:
       label: Mức độ ưu tiên
+      description: Chọn mức độ quan trọng
       options:
-        - label: Low
-          value: low
-        - label: Medium
-          value: medium
-        - label: High
-          value: high
-        - label: Critical
-          value: critical
+        - Low
+        - Medium
+        - High
+        - Critical
+      default: 1
+    validations:
+      required: true
