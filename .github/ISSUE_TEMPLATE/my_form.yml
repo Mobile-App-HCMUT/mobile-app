@@ -8,13 +8,13 @@ body:
   - type: markdown
     attributes:
       value: |
-        Cảm ơn bạn đã đóng góp! Hãy điền các thông tin bên dưới để giúp team tái tạo và làm việc nhanh hơn.
+        Cảm ơn bạn đã đóng góp! Hãy điền các thông tin bên dưới để giúp team tái tạo và xử lý nhanh hơn.
 
   - type: input
-    id: summary
+    id: description
     attributes:
       label: Description
-      description: Giải thích ngắn gọn về feature / cải thiện
+      description: Giải thích chi tiết về tính năng / cải thiện
       placeholder: 'Ví dụ: Enhance the livestream experience by improving the comment viewing functionality'
     validations:
       required: true
@@ -37,16 +37,23 @@ body:
     attributes:
       label: Các tuỳ chọn bổ sung (nếu có)
       options:
-        - Thêm bản dịch tiếng Việt
-        - Hỗ trợ theme tối / sáng
-        - Tương thích thiết bị di động
+        - label: Thêm bản dịch tiếng Việt
+          value: translate_vi
+        - label: Hỗ trợ theme tối / sáng
+          value: theme_support
+        - label: Tương thích thiết bị di động
+          value: mobile_compatible
 
   - type: dropdown
     id: priority
     attributes:
       label: Mức độ ưu tiên
       options:
-        - Low
-        - Medium
-        - High
-        - Critical
+        - label: Low
+          value: low
+        - label: Medium
+          value: medium
+        - label: High
+          value: high
+        - label: Critical
+          value: critical
