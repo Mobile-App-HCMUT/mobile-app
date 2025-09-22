@@ -1,0 +1,61 @@
+name: Feature Request / Improvement
+description: Mô tả tính năng hoặc cải thiện bạn muốn — càng cụ thể càng tốt để team có thể đánh giá & triển khai nhanh.
+title: "[Feature] "
+labels: ["enhancement"]
+assignees: []  # điền usernames GitHub nếu muốn assign mặc định
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Hãy cung cấp các thông tin sau để giúp chúng tôi hiểu rõ yêu cầu.
+
+  - type: input
+    id: description
+    attributes:
+      label: Description
+      description: Giải thích chi tiết về tính năng / cải thiện
+      placeholder: Ví dụ: “Enhance the livestream experience by improving the comment viewing functionality”
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Danh sách các tiêu chí để chấp nhận feature này
+      placeholder: |
+        - Comments appear instantly (<1s delay) without page refresh  
+        - Smooth, consistent synchronization across all viewers  
+        - Fully responsive on desktop  
+        - Backward compatible with existing livestream modules
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: options
+    attributes:
+      label: Các lựa chọn liên quan (nếu có)
+      description: Đánh dấu các tính năng bổ sung nếu bạn muốn
+      options:
+        - Thêm bản dịch tiếng việt
+        - Hỗ trợ theme tối / sáng
+        - Bình luận theo thời gian thực
+        - Tương thích với thiết bị di động
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Mức độ ưu tiên
+      description: Bạn nghĩ mức độ quan trọng thế nào
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+
+  - type: assignees
+    id: who_to_assign
+    attributes:
+      label: Assignees
+      description: Ai sẽ làm issue này (nếu bạn biết)
